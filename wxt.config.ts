@@ -1,4 +1,5 @@
 import { vanillaExtractPlugin } from "@vanilla-extract/vite-plugin";
+import tsconfigPathsPlugin from "vite-tsconfig-paths";
 import { defineConfig, WxtViteConfig } from "wxt";
 
 // See https://wxt.dev/api/config.html
@@ -12,6 +13,6 @@ export default defineConfig({
   },
   vite: () =>
     ({
-      plugins: [vanillaExtractPlugin()],
+      plugins: [vanillaExtractPlugin(), tsconfigPathsPlugin()],
     }) as unknown as WxtViteConfig,
 });

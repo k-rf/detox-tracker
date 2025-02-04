@@ -3,6 +3,7 @@
 import * as pluginCspell from "@cspell/eslint-plugin/configs";
 import pluginImportX from "eslint-plugin-import-x";
 import pluginSonarjs from "eslint-plugin-sonarjs";
+import pluginStorybook from "eslint-plugin-storybook";
 import globals from "globals";
 import tseslint from "typescript-eslint";
 
@@ -23,6 +24,7 @@ export default tseslint.config(
   pluginImportX.flatConfigs.recommended,
   pluginImportX.flatConfigs.typescript,
   pluginSonarjs.configs.recommended,
+  pluginStorybook.configs["flat/recommended"],
   {
     rules: {
       "import-x/order": [

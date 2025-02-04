@@ -6,5 +6,6 @@
     "noUncheckedIndexedAccess": true,
     "noPropertyAccessFromIndexSignature": true,
     "exactOptionalPropertyTypes": true
-  }
+  },
+  "include": ["**/*", "./wxt.d.ts", ".storybook/**/*"]
 }
