@@ -64,6 +64,10 @@
           "editor.defaultFormatter": "biomejs.biome"
         },
 
+        "[snippets]": {
+          "editor.defaultFormatter": "vscode.json-language-features"
+        },
+
         "[markdown]": {
           "editor.unicodeHighlight.ambiguousCharacters": false,
           "editor.unicodeHighlight.invisibleCharacters": false,

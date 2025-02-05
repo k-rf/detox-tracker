@@ -3,6 +3,12 @@
   "compilerOptions": {
     "allowImportingTsExtensions": true,
     "jsx": "react-jsx",
+    "paths": {
+      "~": ["./src"],
+      "~/*": ["./src/*"],
+      "~~": ["."],
+      "~~/*": ["./*"]
+    },
     "noUncheckedIndexedAccess": true,
     "noPropertyAccessFromIndexSignature": true,
     "exactOptionalPropertyTypes": true
