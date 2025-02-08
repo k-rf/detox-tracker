@@ -1,11 +1,4 @@
-import { createVar, style, styleVariants } from "@vanilla-extract/css";
-
-export const widthVar = createVar();
-
-export const rootStyle = style({
-  display: "flex",
-  width: widthVar,
-});
+import { styleVariants } from "@vanilla-extract/css";
 
 const position = {
   start: "start",

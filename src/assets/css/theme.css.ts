@@ -52,7 +52,7 @@ const [paletteClass, paletteVars] = createTheme({
   secondary: "#D91656",
   accent: "#EE66A6",
   error: "#FFEB55",
-  background: colorVars.grey[100],
+  background: colorVars.grey[200],
 });
 
 export const [themeClass, vars] = createTheme({
@@ -71,7 +71,7 @@ export const [themeClass, vars] = createTheme({
     /** 24px */ md: "24px",
     /** 32px */ lg: "32px",
     /** 40px */ xl: "40px",
-  },
+  } as const,
   font: {},
 });
 

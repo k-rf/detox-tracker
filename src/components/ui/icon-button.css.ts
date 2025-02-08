@@ -21,5 +21,5 @@ const size = {
 
 export const sizeVariants = styleVariants(size, ({ size, padding }) => [
   baseStyle,
-  { width: size, height: size, padding: padding, color: vars.color.grey[500] },
+  { width: size, height: size, padding: padding, color: vars.color.grey[600] },
 ]);

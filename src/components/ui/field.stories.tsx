@@ -1,4 +1,4 @@
-import { Box } from "~/__storybook__/box";
+import { Box } from "~/components/ui/layout/box";
 
 import { Field } from "./field";
 

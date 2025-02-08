@@ -1,8 +1,9 @@
 import { fn } from "@storybook/test";
 import { PenIcon } from "lucide-react";
 
-import { Box } from "~/__storybook__/box";
-import { Stack } from "~/__storybook__/stack";
+import { vars } from "~/assets/css/theme.css";
+import { Box } from "~/components/ui/layout/box";
+import { Stack } from "~/components/ui/layout/stack";
 
 import { IconButton } from "./icon-button";
 
@@ -20,7 +21,7 @@ type Story = StoryObj<typeof IconButton>;
 
 export const Size: Story = {
   render: (args) => (
-    <Stack direction="column" gap={8}>
+    <Stack direction="column" gap={vars.spacing.xs}>
       <Box alignItems="center">
         <Box width={48}>xs:</Box>
         <IconButton {...args} size="xs" />
