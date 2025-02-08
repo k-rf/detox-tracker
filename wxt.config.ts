@@ -9,10 +9,13 @@ export default defineConfig({
   extensionApi: "chrome",
   modules: ["@wxt-dev/module-react"],
   manifest: {
-    permissions: ["history"],
+    permissions: ["history", "storage"],
   },
   vite: () =>
     ({
       plugins: [vanillaExtractPlugin(), tsconfigPathsPlugin()],
+      define: {
+        "import.meta.vitest": "undefined",
+      },
     }) as unknown as WxtViteConfig,
 });
