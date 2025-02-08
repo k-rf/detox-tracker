@@ -1,7 +1,7 @@
 import "~/assets/css/reset.css";
 
-import { DetoxTimerModule } from "~/features/detox-timer";
+import { DetoxTrackerFeature } from "~/features/detox-tracker";
 
 export const App = () => {
-  return <DetoxTimerModule />;
+  return <DetoxTrackerFeature />;
 };

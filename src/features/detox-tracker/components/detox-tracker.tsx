@@ -14,7 +14,7 @@ interface Props {
   trackingTarget: TrackingTargetModel;
 }
 
-export const DetoxTimer = ({ trackingTarget }: Props) => {
+export const DetoxTracker = ({ trackingTarget }: Props) => {
   const { replace } = useTrackingTargetStorage();
 
   const [initialTime, setInitialTime] = useState(Math.floor(Date.now() / 1000));
