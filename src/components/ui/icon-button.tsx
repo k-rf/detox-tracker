@@ -10,7 +10,7 @@ interface Props extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 export const IconButton = React.forwardRef<HTMLButtonElement, Props>(
   ({ size, children, ...props }, ref) => {
     return (
-      <button {...props} className={sizeVariants[size]} type="button" ref={ref}>
+      <button {...props} className={sizeVariants[size]} ref={ref}>
         {React.cloneElement(children, { size: "100%" })}
       </button>
     );

@@ -12,6 +12,7 @@ const baseStyle = style({
 
   padding: `0 ${vars.spacing.xs}`,
   border: `1px solid ${vars.color.grey[500]}`,
+  boxSizing: "border-box",
   borderRadius: 4,
 });
 
