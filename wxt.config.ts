@@ -10,6 +10,7 @@ export default defineConfig({
   modules: ["@wxt-dev/module-react"],
   manifest: {
     permissions: ["history", "storage"],
+    host_permissions: ["https://api.notion.com/*"],
   },
   vite: () =>
     ({

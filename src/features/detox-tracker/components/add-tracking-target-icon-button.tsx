@@ -12,7 +12,7 @@ export const AddTrackingTargetIconButton = () => {
     <IconButton
       size="sm"
       onClick={() => {
-        append({ id: createId(), value: "" });
+        append({ id: createId(), value: "", restartTime: Date.now() });
       }}
     >
       <PlusIcon />

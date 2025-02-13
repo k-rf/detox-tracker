@@ -25,7 +25,11 @@ export const Editing: Story = {
     onCancel: fn(),
   },
   render: (args) => {
-    const [value, setValue] = useState<TrackingTargetModel>({ id: createId(), value: "" });
+    const [value, setValue] = useState<TrackingTargetModel>({
+      id: createId(),
+      value: "",
+      restartTime: Date.now(),
+    });
 
     return <TrackingTargetField {...args} target={value} onChange={(value) => setValue(value)} />;
   },

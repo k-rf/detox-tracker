@@ -5,9 +5,9 @@ interface Listener<T extends CallableFunction> {
   removeListener(callback: T): void;
 }
 
-export const useListener = (
-  listener: Listener<typeof handler>,
-  handler: <T>(...args: T[]) => void,
+export const useListener = <T extends CallableFunction>(
+  listener: Listener<T>,
+  handler: T,
   { execOnInit }: { execOnInit?: boolean } = { execOnInit: false },
 ) => {
   useEffect(() => {

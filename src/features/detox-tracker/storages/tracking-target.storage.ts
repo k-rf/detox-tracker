@@ -3,9 +3,29 @@ import { storage } from "wxt/storage";
 
 import { TrackingTargetModel } from "../models/tracking-target.model";
 
-export const trackingTargetStorage = storage.defineItem<TrackingTargetModel[]>(
+interface TrackingTargetDataModelV1 {
+  id: string;
+  value: string;
+}
+
+interface TrackingTargetDataModelV2 {
+  id: string;
+  value: string;
+  restartTime: number;
+}
+
+export const trackingTargetStorage = storage.defineItem<TrackingTargetDataModelV2[]>(
   "local:trackingTarget",
-  { version: 1, init: () => [] },
+  {
+    version: 2,
+    init: () => [],
+    fallback: [],
+    migrations: {
+      2: (data: TrackingTargetDataModelV1[]) => {
+        return data.map((e) => ({ ...e, restartTime: Date.now() }));
+      },
+    },
+  },
 );
 
 export const useTrackingTargetStorage = () => {
